@@ -1,0 +1,33 @@
+#div1{
+    height: 400px;
+    background-color: black;
+    margin-top: -60px;
+    display: flex;
+    direction: row;
+}
+h3{
+    color: white;
+    margin-top: -270px;
+    z-index: 99;
+    margin-left: 50%;
+}
+h1{
+    /* font-size: 5em; */
+    margin-top: -30px;
+    margin-left: 300px;
+    color: white;
+    font-size: 100px;
+}
+img{
+    height: 525px;
+    width: 450px;
+    z-index: 80;
+    margin-top: -139px;
+}
+p{
+    margin-top: -90px;
+    z-index: 99;
+}
+span{
+    font-size: 15px;
+}

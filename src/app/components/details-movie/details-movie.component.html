@@ -1,0 +1,23 @@
+ <div><h1>Détails du films {{inter.title}}</h1>
+<app-images-du-film></app-images-du-film>
+
+<h3 class="description">Description</h3>
+<p>{{inter.description}}</p>
+<h3>Dates</h3>
+<ng-container *ngFor="let date of inter.dates" >
+    <p>{{date.date}}</p>
+</ng-container>
+<h3>Collections</h3>
+<app-liste-des-collections></app-liste-des-collections>
+<h3>Liste des auteurs</h3>
+<app-liste-des-auteurs></app-liste-des-auteurs>
+<h3>Liste des personnages</h3>
+<app-liste-des-personnages></app-liste-des-personnages>
+<h3>Liste des personnages</h3>
+<h3>Stories</h3>
+<app-liste-des-stories></app-liste-des-stories>
+
+<h3>Informations sur les events </h3>
+<app-liste-des-evenements></app-liste-des-evenements>
+
+</div>

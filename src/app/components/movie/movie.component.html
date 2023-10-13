@@ -1,0 +1,68 @@
+<div class="global"><h1>Affichage des films</h1>
+<div *ngIf="currentURL === '/cinema'; else elseBlock" class="card">
+
+  <!-- Afficher le contenu si la condition est vraie -->
+  <!-- <div *ngFor="let film of COMICSt" class="custom-card">
+
+    <div class="card-content">
+      <div> <img class="card-image"  src="assets/{{film.thumbnail.path}}.{{film.thumbnail.extension}}" alt=""></div>
+<div>
+    <p>TITRE DU FILM : {{film.title}}</p>
+    <span>Description </span><br>
+    <span>{{film.description}}</span>
+    <p>NUMERO DE VERSION : {{film.issueNumber}}</p>
+    <p>NOMBRE DE PERSONNAGES : {{film.characters.returned}}</p>
+    <p>NOMBRE DE createurs: {{film.creators.returned}}</p>
+    <ng-container *ngFor="let collec of film.collections" >
+      <span>Titre  de la collection :  <a> {{collec.name}}</a>
+      </span></ng-container>
+
+    <br>
+    <span><button (click)="handleevnt(film)">Détails</button></span>
+  </div>
+</div>
+  </div> -->
+  <div *ngFor="let film of COMICSt" class="custom-card">
+
+    <div class="card-content">
+      <div> <img class="card-image"  src="assets/{{film.thumbnail.path}}.{{film.thumbnail.extension}}" alt=""></div>
+<div>
+    <p>TITRE DU FILM : {{film.title}}</p>
+    <span>Description </span><br>
+    <p>{{film.description}}</p>
+    <p>NUMERO DE VERSION : {{film.issueNumber}}</p>
+    <p>NOMBRE DE PERSONNAGES : {{film.characters.returned}}</p>
+    <p>NOMBRE DE createurs: {{film.creators.returned}}</p>
+    <ng-container *ngFor="let collec of film.collections" >
+      <span>Titre  de la collection : 
+      </span> <a> {{collec.name}}</a><br></ng-container>
+
+    <br>
+    <span><button (click)="handleevnt(film)">Détails</button></span>
+  </div>
+</div>
+  </div>
+</div>
+<ng-template #elseBlock>
+  <!-- Afficher le contenu si la condition est fausse -->
+  <div *ngFor="let film of COMICSAVECIMAGES" class="custom-card">
+
+    <div class="card-content">
+      <div> <img class="card-image"  src="assets/{{film.thumbnail.path}}.{{film.thumbnail.extension}}" alt=""></div>
+<div>
+    <p>TITRE DU FILM : {{film.title}}</p>
+    <span>Description </span><br>
+    <span>{{film.description}}</span>
+    <p>NUMERO DE VERSION : {{film.issueNumber}}</p>
+    <p>NOMBRE DE PERSONNAGES : {{film.characters.returned}}</p>
+    <p>NOMBRE DE createurs: {{film.creators.returned}}</p>
+    <ng-container *ngFor="let collec of film.collections" >
+      <span>Titre  de la collection : 
+      </span> <a> {{collec.name}}</a><br></ng-container>
+
+    <br>
+    <span><button (click)="handleevnt(film)">Détails</button></span>
+  </div>
+</div>
+  </div>
+</ng-template></div>
